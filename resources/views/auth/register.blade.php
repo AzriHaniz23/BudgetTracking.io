@@ -79,7 +79,7 @@
                     </div>
                     <br><br>
                     <div>
-                        <button type='submit'> Sign Up
+                        <button type='submit' class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-half"> Sign Up 
                         </button>
                         {{-- <a href="{{ route('terms') }}" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Sign Up</a> --}}
                     </div>

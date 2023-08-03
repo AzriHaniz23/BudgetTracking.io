@@ -47,9 +47,18 @@
                     <a href="{{ route('password.request') }}" class="text-blue-500 text-sm">Forgot Password?</a>
                 </div>
                 <br>
-                <div>
-                    <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Login</button>
-                </div>
+                <style>
+                    .center-container {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      height: 100%; /* This is optional, but it ensures the button stays vertically centered */
+                    }
+                  </style>
+                  
+                  <div class="center-container">
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium">Login</button>
+                  </div>
             </form>
         </div>
 
