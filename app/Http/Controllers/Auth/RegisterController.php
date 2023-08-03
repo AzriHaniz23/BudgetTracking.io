@@ -28,15 +28,22 @@ class RegisterController extends Controller
             'password' => 'required|confirmed',
         ]);
 
-        User::create([
+        $user = User::create([
             'name' => $request->name,
             'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        auth()->attempt($request->only('email', 'password'));
+        // auth()->attempt($request->only('email', 'password'));
 
-        return redirect()->route('dashboard');
+        // return redirect()->route('terms');
+        return view('auth.terms', compact('user'));
+    }
+    public function acceptTerms(Request $request)
+    {
+        $data =  $request->all();
+        echo json_encode($data);
+        // echo "testinjg";
     }
 }

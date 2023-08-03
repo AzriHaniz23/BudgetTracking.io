@@ -34,6 +34,7 @@ Route::get('/contactus', function () {
 Route::get('/terms', function () {
     return view('terms');
 })->name('terms');
+Route::post('/terms', [RegisterController::class, 'acceptTerms']);
 
 Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
 
@@ -44,9 +45,10 @@ Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
-Route::get('/register', 'Auth\RegisterController@index')->name('register');
 
-Auth::routes();
+// Route::get('/register', 'Auth\RegisterController@index')->name('register');
+
+// Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::view('/terms', 'auth.terms')->name('terms');

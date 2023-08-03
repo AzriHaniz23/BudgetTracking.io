@@ -79,7 +79,9 @@
                     </div>
                     <br><br>
                     <div>
-                        <a href="{{ route('terms') }}" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Sign Up</a>
+                        <button type='submit'> Sign Up
+                        </button>
+                        {{-- <a href="{{ route('terms') }}" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Sign Up</a> --}}
                     </div>
                 </form>
             </div>
