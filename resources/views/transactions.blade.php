@@ -30,13 +30,13 @@
 
             <!-- Right Content -->
 
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold">Transaction History</h2>
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded font-medium">Sign Out</button>
-                </form>
-            </div>
+           <div class="flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-bold">Transaction History</h2>
+    <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded font-medium ml-2">Sign Out</button>
+    </form>
+</div>
 
             <div class="flex space-x-4 mt-2">
                 <button class="bg-blue-500 text-white px-4 py-2 rounded font-medium">Sort</button>
@@ -61,11 +61,52 @@
                 </div>
                 <div>
                     <!-- Date Section -->
+                <div>
                     <label for="date" class="block font-medium">Date:</label>
-                    <input type="date" id="date" class="border border-gray-300 rounded px-3 py-2 w-36">
+                <div class="flex">
+                     <input type="date" id="date" class="border border-gray-300 rounded px-3 py-2 w-36">
+                 <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium ml-2">Submit</button>
+                 </div>
                 </div>
-            </div>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Function to update the transaction history based on the filters
+        function updateTransactionHistory() {
+            var item = $("#item").val();
+            var merchant = $("#merchant").val();
+            var paymentMethod = $("#payment_method").val();
+            var date = $("#date").val();
+
+            // You can use AJAX here to fetch the filtered data from the server
+            // and update the transaction history dynamically without a page reload
+            // Example using AJAX:
+            $.ajax({
+                url: "{{ route('filter_transactions') }}",
+                method: "GET",
+                data: { item: item, merchant: merchant, paymentMethod: paymentMethod, date: date },
+                success: function (response) {
+                    $("#transaction-history").html(response);
+                },
+                error: function () {
+                    console.log("Error fetching filtered data.");
+                }
+            });
+        }
+
+        // Attach the updateTransactionHistory function to the submit button
+        $("#submit-button").click(function () {
+            updateTransactionHistory();
+        });
+
+        // Attach the updateTransactionHistory function to each filter input field's change event
+        $("#item, #merchant, #payment_method, #date").on("input", function () {
+            updateTransactionHistory();
+        });
+    });
+</script>
             <!-- Add your content for the right side here -->
         </div>
     </div>
+    
 @endsection

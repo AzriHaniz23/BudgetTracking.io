@@ -65,6 +65,7 @@ Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 Route::get('/transactions', [DashboardController::class, 'index'])->name('transactions');
 Route::get('/transactions', 'TransactionsController@index')->name('transactions');
 Route::get('/transactions', [TransactionsController::class, 'index'])->name('transactions');
+Route::get('/filter_transactions', 'TransactionController@filterTransactions')->name('filter_transactions');
 
 // Define the route for the password reset link request form
 Route::get('password/reset', 'App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');

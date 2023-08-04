@@ -42,36 +42,71 @@
             <!-- Add your content for the right side here -->
             
             <br> 
-            <h3 class="text-1xl font-bold">Recent History</h3>
-            <div class="slidecontainer">
-                <p>Set Income:</p>
-                <input type="range" min="0" max="100000" value="50000">
-            </div>
+            <h3 class="text-1x2 font-bold">Recent History</h3>
             <br> 
-            <div class="slidecontainer">
-                <p>Set Expense:</p>
-                <input type="range" min="0" max="5000" value="2500">
+
+            <form id="incomeExpenseForm" action="/process_form" method="post">
+                @csrf
+
+    <!-- Your other form fields here -->
+
+    <div style="margin-bottom: 15px;">
+        <label for="income" style="display: block; font-weight: bold;">Set Income:</label>
+        <input type="number" id="income" name="income" min="0" max="500000" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+        <label for="expense" style="display: block; font-weight: bold;">Set Expense:</label>
+        <input type="number" id="expense" name="expense" min="0" max="500000" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+    
+    <button class="bg-blue-500 text-white px-4 py-3 rounded font-medium" type="submit">Submit</button>
+</form>
+
                 <br> <br>
                 
                 <style>
                     .square-container {
-                        width: 200px; /* You can adjust the width and height to your desired size */
-                        height: 150px; /* Make sure width and height have the same value for a square */
+                        width: 300px; /* You can adjust the width and height to your desired size */
+                        height: 200px; /* Make sure width and height have the same value for a square */
 
                     }
                 
 
                 </style>
                 
- 
+                <div class="bg-gray-300 p-4 rounded square-container">
+                    <p class="text-lg font">Total Income $<span id="totalIncome">0</span></p>
+                    <br>
+                    <p class="text-lg font">Total Expenses $<span id="totalExpenses">0</span></p>
+                    <br>
+                    <p class="text-lg font">Total Balance $<span id="totalBalance">0</span></p>
+                </div>
+                <script>
+                    const form = document.getElementById('incomeExpenseForm');
+                    const incomeInput = document.getElementById('income');
+                    const expenseInput = document.getElementById('expense');
+                    const totalIncomeDisplay = document.getElementById('totalIncome');
+                    const totalExpensesDisplay = document.getElementById('totalExpenses');
+                    const totalBalanceDisplay = document.getElementById('totalBalance');
+                    
+                    form.addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        
+                        const incomeValue = parseFloat(incomeInput.value);
+                        const expenseValue = parseFloat(expenseInput.value);
+                        
+                        // Update total income, expenses, and balance
+                        totalIncomeDisplay.textContent = (parseFloat(totalIncomeDisplay.textContent) + incomeValue).toFixed(2);
+                        totalExpensesDisplay.textContent = (parseFloat(totalExpensesDisplay.textContent) + expenseValue).toFixed(2);
+                        totalBalanceDisplay.textContent = (parseFloat(totalIncomeDisplay.textContent) - parseFloat(totalExpensesDisplay.textContent)).toFixed(2);
+                        
+                        // Reset input fields
+                        incomeInput.value = '';
+                        expenseInput.value = '';
+                    });
+                </script>
                 
-                <div class="bg-gray-300 p-4 rounded square-container" >
-                    <p class="text-lg font">Total Income $0</p>
-                    <br>
-                    <p class="text-lg font">Total Expenses $0</p>
-                    <br>
-                    <p class="text-lg font">Total Balance $0</p>
             </div>
-        </div>
     </div>
 @endsection
