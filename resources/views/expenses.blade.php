@@ -50,16 +50,16 @@
                 </div>
             </div>
             <div class="bg-gray-300 p-4 rounded square-container6 ml-4">
-                <div class="gray-box">
+                <div class="gray-box"><br>
                     Groceries
                     <br><br><br><br>
-                    Latptop
-                    <br> 
+                    Laptop
+                    <br>
                     Repair
                     <br><br><br><br>
-                    Nettflix
+                    Netflix
                     <br>
-                    Subsription
+                    Subscription
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
             }
             .square-container6 {
                 width: 534px;
-                height: 308px;
+                height: 325px;
             }
             .square-container2 {
                 width: 450px;
