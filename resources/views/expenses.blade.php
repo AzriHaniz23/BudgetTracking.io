@@ -42,12 +42,53 @@
                 Total Expenses: $0
             </div>
         </div>
+
         <br>
+        
         <div class="flex">
             <div class="bg-gray-300 p-4 rounded square-container2">
                 <div class="gray-box">
                     Expenses (i.e. groceries)
                 </div>
+                
+                <br>
+
+            <div class="bg-gray-300 p-4 rounded square-container3">
+                <div class="gray-box">
+                    Expenses Amount
+                    </div>
+                </div>
+
+                <br>
+                
+                <div class="bg-gray-300 p-4 rounded calendar-container">
+                    <input type="date" id="selectedDate" class="calendar-input">
+                </div>
+                
+                <br>
+                <div class="bg-gray-300 p-4 rounded square-container4">
+                    <div class="gray-box">
+                        <select>
+                            <option value="" disabled selected>Total Expenses</option>
+                            <option value="option1">Expenses 1</option>
+                            <option value="option2">Expenses 2</option>
+                            <option value="option3">Expenses 3</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                </div>
+                
+                <br>
+                <div class="bg-gray-300 p-4 rounded square-container5">
+                    <div class="gray-box">
+                        Add other details / references
+                    </div>
+                </div>
+                
+                <br>
+                
+                <button class="add-expenses-button">Add Expenses</button>
+                
             </div>
             <div class="bg-gray-300 p-4 rounded square-container6 ml-4">
                 <div class="gray-box"><br>
@@ -64,39 +105,6 @@
             </div>
         </div>
         
-        <br>
-        <div class="bg-gray-300 p-4 rounded square-container2">
-            <div class="gray-box">
-                Expenses Amount
-            </div>
-        </div>
-        <br>
-        <div class="bg-gray-300 p-4 rounded calendar-container">
-            <input type="date" id="selectedDate" class="calendar-input">
-        </div>
-        
-        <br>
-        <div class="bg-gray-300 p-4 rounded square-container4">
-            <div class="gray-box">
-                <select>
-                    <option value="" disabled selected>Total Expenses</option>
-                    <option value="option1">Expenses 1</option>
-                    <option value="option2">Expenses 2</option>
-                    <option value="option3">Expenses 3</option>
-                    <!-- Add more options as needed -->
-                </select>
-            </div>
-        </div>
-        
-        <br>
-        <div class="bg-gray-300 p-4 rounded square-container5">
-            <div class="gray-box">
-                Add other details / references
-            </div>
-        </div>
-        <button class="add-income-button">Add Expenses</button>
-        </div>
-        
         <!-- Add your content for the right side here -->
         </div>
         </div>
@@ -107,43 +115,49 @@
                 width: 1000px;
                 height: 50px;
             }
-            .square-container6 {
-                width: 534px;
-                height: 325px;
-            }
             .square-container2 {
                 width: 450px;
                 height: 50px;
             }
-        
-            .calendar-container {
-            width: 400px;
-            padding: 10px;
-        
-        }
-        
-        .calendar-input {
-            width: 100%;
-            padding: 8px;
-        
-        }
-        
+            .square-container3 {
+                width: 450px;
+                height: 50px;
+            }
             .square-container4 {
                 width: 300px;
                 height: 50px;
             }
             .square-container5 {
-                width: 450px;
-                height: 200px;
+            width: 450px;
+            height: 200px;
+            margin-bottom: 20px; /* Add some margin at the bottom */
+            }
+            .square-container6 {
+                width: 534px;
+                height: 325px;
+            }
+            
+            
+            .calendar-container {
+            width: 400px;
+            padding: 10px;
+        
             }
         
-            .add-income-button {
-                margin-top: 10px;
-                padding: 8px 16px;
-                background-color: #234ab2; 
-                color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
+            .calendar-input {
+            width: 100%;
+            padding: 8px;
+        
             }
+
+            .add-expenses-button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #234ab2; 
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
         </style>

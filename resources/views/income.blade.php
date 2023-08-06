@@ -83,6 +83,9 @@
                 Add other details / references (i.e Freelancing salary)
             </div>
         </div>
+
+        <br>
+
         <button class="add-income-button">Add Income</button>
     </div>
     <div class="bg-gray-300 p-4 rounded square-container6 ml-4">
@@ -128,18 +131,20 @@
         height: 50px;
     }
     .square-container5 {
-        width: 450px;
-        height: 200px;
-    }
+            width: 450px;
+            height: 200px;
+            margin-bottom: 20px; /* Add some margin at the bottom */
+            }
 
     .add-income-button {
-        margin-top: 10px;
-        padding: 8px 16px;
-        background-color: #234ab2; 
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #234ab2; 
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
 </style>
 
