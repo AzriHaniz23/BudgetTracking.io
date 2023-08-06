@@ -50,35 +50,35 @@
                 </div>
             
                  <!-- Inputs -->
-        <div class="mt-8">
-            <!-- Full Name Input -->
-            <div class="mb-4">
-                <label for="full_name" class="block font-medium text-gray-700">Full Name:</label>
-                <input type="text" id="full_name" name="full_name" class="mt-1 p-2 border rounded w-full" placeholder="Enter your full name">
-            </div>
-
-            <!-- Username Input -->
-            <div class="mb-4">
-                <label for="username" class="block font-medium text-gray-700">Username:</label>
-                <input type="text" id="username" name="username" class="mt-1 p-2 border rounded w-full" placeholder="Enter your username">
-            </div>
-        
-            <!-- Phone No Input -->
-            <div class="mb-4">
-                <label for="phone_no" class="block font-medium text-gray-700">Phone No:</label>
-                <input type="text" id="phone_no" name="phone_no" class="mt-1 p-2 border rounded w-full" placeholder="Enter your phone no">
-            </div>
-            
-            <!-- Email Address Input -->
-            <div class="mb-4">
-                <label for="email_address" class="block font-medium text-gray-700">Email Address:</label>
-                <input type="text" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-full" placeholder="Enter your email address">
-            </div>
-        </div>
-
-        <div class="flex mt-3">
-            <button class="bg-blue-700 text-white px-5 py-1 rounded mr-1">Change</button>
-        </div>
+                 <div class="mt-8">
+                    <!-- Full Name Input -->
+                    <div class="mb-4">
+                        <label for="full_name" class="block font-medium text-gray-700">Full Name:</label>
+                        <input type="text" id="full_name" name="full_name" class="mt-1 p-2 border rounded w-full" placeholder="Enter your full name">
+                    </div>
+                
+                    <!-- Username Input -->
+                    <div class="mb-4">
+                        <label for="username" class="block font-medium text-gray-700">Username:</label>
+                        <input type="text" id="username" name="username" class="mt-1 p-2 border rounded w-full" placeholder="Enter your username">
+                    </div>
+                    
+                    <!-- Phone No Input -->
+                    <div class="mb-4">
+                        <label for="phone_no" class="block font-medium text-gray-700">Phone No:</label>
+                        <input type="text" id="phone_no" name="phone_no" class="mt-1 p-2 border rounded w-full" placeholder="Enter your phone no">
+                    </div>
+                    
+                    <!-- Email Address Input -->
+                    <div class="mb-4">
+                        <label for="email_address" class="block font-medium text-gray-700">Email Address:</label>
+                        <input type="text" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-full" placeholder="Enter your email address">
+                    </div>
+                </div>
+                
+                <div class="flex mt-3">
+                    <button class="bg-blue-700 text-white px-5 py-1 rounded mr-1">Change</button>
+                </div>                        
         
         <!-- Add your content for the right side here -->
 
@@ -116,8 +116,8 @@
         </div>
 
         <!-- ... (similar structure for new password and confirm password) ... -->
-        <div class="flex mt-3">
-            <button class="bg-blue-700 text-white px-5 py-1 rounded mr-1">Confirm</button>
+        <div class="flex justify-center mt-3">
+            <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
         </div>
     </div>
 </div>
