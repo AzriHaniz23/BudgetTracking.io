@@ -49,16 +49,20 @@
 <div class="flex">
     <div class="bg-gray-300 p-4 rounded square-container2">
         <div class="gray-box">
-            Your Occupation (i.e. Freelancer)
+            <input type="text" id="occupation-input" placeholder="Your Occupation (i.e. Freelancer)" class="placeholder-gray-500 w-full">
+        </div>
     </div>
+</div>
 
         <br>
 
-    <div class="bg-gray-300 p-4 rounded square-container2">
-        <div class="gray-box">
-            Salary Amount
+        <div class="bg-gray-300 p-4 rounded square-container2">
+            <div class="gray-box">
+                <label for="salary-amount-input" class="sr-only">Salary Amount</label>
+                <input type="number" id="salary-amount-input" placeholder="Salary amount" class="placeholder-gray-500 ">
+            </div>
         </div>
-    </div>
+        
 
         <br>
 
@@ -80,11 +84,11 @@
         <br>
         <div class="bg-gray-300 p-4 rounded square-container5">
             <div class="gray-box">
-                Add other details / references (i.e Freelancing salary)
+                <label for="other-details-input" class="sr-only">Add other details / references</label>
+                <textarea id="other-details-input" placeholder="Add other details / references" class="w-full h-24 resize-y"></textarea>
             </div>
-        </div>
+        </div>        
 
-        <br>
 
         <button class="add-income-button">Add Income</button>
     </div>
