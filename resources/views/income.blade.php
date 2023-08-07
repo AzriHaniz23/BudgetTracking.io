@@ -47,30 +47,25 @@
 </div>
 <br>
 <div class="flex">
-    <div class="bg-gray-300 p-4 rounded square-container2">
-        <div class="gray-box">
-            <input type="text" id="occupation-input" placeholder="Your Occupation (i.e. Freelancer)" class="placeholder-gray-500 w-full">
-        </div>
-    </div>
-</div>
-
-        <br>
-
+    <div class="left-column">
         <div class="bg-gray-300 p-4 rounded square-container2">
             <div class="gray-box">
-                <label for="salary-amount-input" class="sr-only">Salary Amount</label>
-                <input type="number" id="salary-amount-input" placeholder="Salary amount" class="placeholder-gray-500 ">
+                <input type="text" id="occupation-input" placeholder="Your Occupation (i.e. Freelancer)" class="placeholder-gray-500 w-full">
             </div>
         </div>
-        
 
-        <br>
-
-        <div class="bg-gray-300 p-4 rounded calendar-container">
+        <div class="bg-gray-300 p-4 rounded calendar-container mt-4">
             <input type="date" id="selectedDate" class="calendar-input">
         </div>
-        <br>
-        <div class="bg-gray-300 p-4 rounded square-container4">
+
+        <div class="bg-gray-300 p-4 rounded square-container2 mt-4">
+            <div class="gray-box">
+                <label for="salary-amount-input" class="sr-only">Salary Amount</label>
+                <input type="number" id="salary-amount-input" placeholder="Salary amount" class="placeholder-gray-500">
+            </div>
+        </div>
+
+        <div class="bg-gray-300 p-4 rounded square-container4 mt-4">
             <div class="gray-box">
                 <select>
                     <option value="" disabled selected>Select Option</option>
@@ -81,25 +76,29 @@
                 </select>
             </div>
         </div>
-        <br>
-        <div class="bg-gray-300 p-4 rounded square-container5">
+
+        <div class="bg-gray-300 p-4 rounded square-container5 mt-4">
             <div class="gray-box">
                 <label for="other-details-input" class="sr-only">Add other details / references</label>
                 <textarea id="other-details-input" placeholder="Add other details / references" class="w-full h-24 resize-y"></textarea>
             </div>
-        </div>        
-
-
-        <button class="add-income-button">Add Income</button>
+        </div>
     </div>
-    <div class="bg-gray-300 p-4 rounded square-container6 ml-4">
-        <div class="gray-box"><br>
-            Freelancer
-            <br><br><br><br>
-            Developer
+    
+    <div class="right-column ml-4">
+        <div class="bg-gray-300 p-4 rounded square-container6">
+            <div class="gray-box">
+                Freelancer
+                <br><br><br><br>
+                Developer
+            </div>
         </div>
     </div>
 </div>
+
+<button class="add-income-button mt-4">Add Income</button>
+
+
 
 <!-- Add your content for the right side here -->
 </div>
