@@ -88,9 +88,8 @@
     <div class="right-column ml-4">
         <div class="bg-gray-300 p-4 rounded square-container6">
             <div class="gray-box">
-                Freelancer
-                <br><br><br><br>
-                Developer
+                <div class="item item-space">Freelancer</div>
+            <div class="item item-space">Developer</div>
             </div>
         </div>
     </div>
@@ -148,6 +147,18 @@
             border-radius: 4px;
             cursor: pointer;
             }
+            .gray-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    margin-bottom: 64px; /* Adjust the spacing as needed */
+}
+
+.item-space {
+    margin-top: 21px; /* Adjust the spacing as needed */
+}
 
 </style>
 

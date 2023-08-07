@@ -90,15 +90,13 @@
             <div class="right-column ml-4">
                 <div class="bg-gray-300 p-4 rounded square-container6">
                     <div class="gray-box">
-                        Groceries
-                        <br><br><br><br>
-                        Laptop Repair
-                        <br><br><br><br>
-                        Netflix Subscription
+                        <div class="item item-space">Groceries</div>
+                        <div class="item item-space">Laptop Repair</div>
+                        <div class="item item-space">Netflix Subscription</div>
                     </div>
                 </div>
             </div>
-        </div>
+            
         
             
         
@@ -157,5 +155,15 @@
             border-radius: 4px;
             cursor: pointer;
             }
+.gray-box {
+    display: flex;
+    flex-direction: column;
+}
 
+.item {
+    margin-bottom: 72px; /* Adjust the spacing as needed */
+}
+.item-space {
+    margin-top: 20px; /* Adjust the spacing as needed */
+}
         </style>
