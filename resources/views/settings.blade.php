@@ -37,68 +37,68 @@
             </div>
             <hr class="my-8 mt-2 border-t-4 border-blue-500">
 
-             <!-- Profile Picture Section -->
+            <div class="flex justify-between">
+
+    <!-- Profile Picture Section -->
+    <div class="md:w-1/3">
         <div class="flex items-center mb-4">
             <div class="w-20 h-20 rounded-full overflow-hidden">
                 <img src="{{ asset('path_to_profile_picture.jpg') }}" alt="Profile Picture" class="w-full h-full object-cover">
             </div>
         </div>
         <p class="text-sm">Change Profile Picture (must be 2-5 MB)</p>
-                <div class="flex mt-2">
-                    <button class="bg-blue-700 text-white px-5 py-1 rounded mr-1">Upload <br> New <br> Image</button>
-                    <button class="bg-blue-700 text-white px-5 py-1 rounded">Remove <br> Photo</button>
-                </div>
-            
-                 <!-- Inputs -->
-                 <div class="mt-8">
-                    <!-- Full Name Input -->
-                    <div class="mb-4">
-                        <label for="full_name" class="block font-medium text-gray-700">Full Name:</label>
-                        <input type="text" id="full_name" name="full_name" class="mt-1 p-2 border rounded w-1/2" placeholder="Enter your full name">
-                    </div>
-                
-                    <!-- Username Input -->
-                    <div class="mb-4">
-                        <label for="username" class="block font-medium text-gray-700">Username:</label>
-                        <input type="text" id="username" name="username" class="mt-1 p-2 border rounded w-1/2" placeholder="Enter your username">
-                    </div>
-                
-                    <!-- Phone No Input -->
-                    <div class="mb-4">
-                        <label for="phone_no" class="block font-medium text-gray-700">Phone No:</label>
-                        <input type="text" id="phone_no" name="phone_no" class="mt-1 p-2 border rounded w-1/2" placeholder="Enter your phone no">
-                    </div>
-                
-                    <!-- Email Address Input -->
-                    <div class="mb-4">
-                        <label for="email_address" class="block font-medium text-gray-700">Email Address:</label>
-                        <input type="text" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-1/2" placeholder="Enter your email address">
-                    </div>
-                </div>
-                
-                <div class="flex mt-3">
-                    <button class="bg-blue-700 text-white px-5 py-1 rounded mr-1">Change</button>
-                </div>
-                                       
-        
-        <!-- Add your content for the right side here -->
+        <div class="flex mt-2">
+            <button class="bg-blue-700 text-white px-5 py-1 rounded mr-1">Upload <br> New <br> Image</button>
+            <button class="bg-blue-700 text-white px-5 py-1 rounded">Remove <br> Photo</button>
+        </div>
+    </div>
+
+    <div class="mt-1 md:w-2/3">
+        <!-- Full Name Input -->
+        <div class="mb-4">
+            <label for="full_name" class="block font-medium text-gray-700">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" class="mt-1 p-2 border rounded w-3/4" placeholder="Enter your full name">
+        </div>        
+    
+        <!-- Username Input -->
+        <div class="mb-4">
+            <label for="username" class="block font-medium text-gray-700">Username:</label>
+            <input type="text" id="username" name="username" class="mt-1 p-2 border rounded w-3/4" placeholder="Enter your username">
+        </div>        
+    
+        <!-- Phone No Input -->
+        <div class="mb-4">
+            <label for="phone_no" class="block font-medium text-gray-700">Phone No:</label>
+            <input type="text" id="phone_no" name="phone_no" class="mt-1 p-2 border rounded w-3/4" placeholder="Enter your phone no">
+        </div>        
+    
+        <!-- Email Address Input -->
+        <div class="mb-4" class="input-container">
+            <label for="email_address" class="block font-medium text-gray-700">Email Address:</label>
+            <input type="text" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-3/4" placeholder="Enter your email address">
+        </div>
+    </div>
+</div>
+
+<div class="flex justify-center"> 
+    <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
+</div>
 
      <!-- Change Password section -->
-     <div class="bg-gray-700 p-4 rounded-lg mt-4 max-w-2xl mx-auto">
-        <div class="flex justify-center mb-2">
+     <div class="bg-gray-700 p-4 rounded-lg mt-8 max-w-2xl mx-auto">
+        <div class="flex justify-center mb-2" class="button-container">
             <h3 class="text-xl font-semibold text-white">Change Password</h3>
         </div>
         <div class="mb-2">
             <label for="previous_password" class="block font-medium text-gray-300">Previous Password:</label>
-            <div class="relative">
-                <input type="password" id="previous_password" name="previous_password" class="mt-1 p-1 border rounded w-3/6" placeholder="Previous password">
-                <div class="absolute inset-y-0 right-1 top-1 pr-3 flex items-center">
+            <div class="relative flex items-center">
+                <input type="password" id="previous_password" name="previous_password" class="mt-1 p-1 border rounded w-full" placeholder="Previous password">
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
                     <input type="checkbox" id="showPreviousPassword" class="form-checkbox h-5 w-5 text-gray-600">
                     <label for="showPreviousPassword" class="ml-2 text-sm text-gray-600">Show Password</label>
                 </div>
             </div>
         </div>
-        
         
         <div class="flex justify-between">
             <div class="mb-2 mr-2 w-1/2">
@@ -128,6 +128,7 @@
             <button class="bg-blue-700 text-white px-4 py-1 rounded">Change</button>
         </div>
     </div>
+    
     <script>
         function setupShowPasswordButton(buttonId, inputId) {
             const showButton = document.getElementById(buttonId);
@@ -146,7 +147,6 @@
         setupShowPasswordButton('showNewPassword', 'type_new_password');
         setupShowPasswordButton('showConfirmPassword', 'confirm_password');
     </script>
-
 </div>
 </div>
 @endsection
