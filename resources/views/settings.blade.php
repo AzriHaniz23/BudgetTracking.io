@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex h-screen">
-        <div class="w-1/5 bg-blue-700 text-white p-6">
-            <!-- Left Sidebar -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<div class="flex h-screen">
+    <div class="w-1/5 bg-blue-700 text-white p-6">
+        <!-- Left Sidebar -->
             <div class="flex items-center mb-6">
                 <img src="path_to_your_logo.png" alt="Logo" class="h-8 mr-2">
                 <h2 class="text-lg font-bold">Finance <br>Tracker</h2>
@@ -27,6 +30,7 @@
             <a href="{{ route('settings') }}" class="text-white hover:text-gray-200">Settings</a>
         </div>
         <div class="w-4/5 bg-white p-6">
+            
             <!-- Right Content -->
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold">Personal Information</h2>
