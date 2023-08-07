@@ -54,72 +54,99 @@
                     <!-- Full Name Input -->
                     <div class="mb-4">
                         <label for="full_name" class="block font-medium text-gray-700">Full Name:</label>
-                        <input type="text" id="full_name" name="full_name" class="mt-1 p-2 border rounded w-full" placeholder="Enter your full name">
+                        <input type="text" id="full_name" name="full_name" class="mt-1 p-2 border rounded w-1/2" placeholder="Enter your full name">
                     </div>
                 
                     <!-- Username Input -->
                     <div class="mb-4">
                         <label for="username" class="block font-medium text-gray-700">Username:</label>
-                        <input type="text" id="username" name="username" class="mt-1 p-2 border rounded w-full" placeholder="Enter your username">
+                        <input type="text" id="username" name="username" class="mt-1 p-2 border rounded w-1/2" placeholder="Enter your username">
                     </div>
-                    
+                
                     <!-- Phone No Input -->
                     <div class="mb-4">
                         <label for="phone_no" class="block font-medium text-gray-700">Phone No:</label>
-                        <input type="text" id="phone_no" name="phone_no" class="mt-1 p-2 border rounded w-full" placeholder="Enter your phone no">
+                        <input type="text" id="phone_no" name="phone_no" class="mt-1 p-2 border rounded w-1/2" placeholder="Enter your phone no">
                     </div>
-                    
+                
                     <!-- Email Address Input -->
                     <div class="mb-4">
                         <label for="email_address" class="block font-medium text-gray-700">Email Address:</label>
-                        <input type="text" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-full" placeholder="Enter your email address">
+                        <input type="text" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-1/2" placeholder="Enter your email address">
                     </div>
                 </div>
                 
                 <div class="flex mt-3">
                     <button class="bg-blue-700 text-white px-5 py-1 rounded mr-1">Change</button>
-                </div>                        
+                </div>
+                                       
         
         <!-- Add your content for the right side here -->
 
-     <!-- New Section: Change Password -->
-     <div class="bg-gray-700 p-6 rounded-lg mt-8">
-        <h3 class="text-xl font-semibold text-white mb-4">Change Password</h3>
-        <div class="mb-4">
-            <label for="previous_password" class="block font-medium text-gray-300">Enter Previous Password:</label>
+     <!-- Change Password section -->
+     <div class="bg-gray-700 p-4 rounded-lg mt-4 max-w-2xl mx-auto">
+        <div class="flex justify-center mb-2">
+            <h3 class="text-xl font-semibold text-white">Change Password</h3>
+        </div>
+        <div class="mb-2">
+            <label for="previous_password" class="block font-medium text-gray-300">Previous Password:</label>
             <div class="relative">
-                <input type="password" id="previous_password" name="previous_password" class="mt-1 p-2 border rounded w-full" placeholder="Enter your previous password">
-                <button type="button" class="absolute right-2 top-2 text-gray-400" id="showPreviousPassword">
-                    Show
-                </button>
+                <input type="password" id="previous_password" name="previous_password" class="mt-1 p-1 border rounded w-3/6" placeholder="Previous password">
+                <div class="absolute inset-y-0 right-1 top-1 pr-3 flex items-center">
+                    <input type="checkbox" id="showPreviousPassword" class="form-checkbox h-5 w-5 text-gray-600">
+                    <label for="showPreviousPassword" class="ml-2 text-sm text-gray-600">Show Password</label>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="flex justify-between">
+            <div class="mb-2 mr-2 w-1/2">
+                <label for="type_new_password" class="block font-medium text-gray-300">New Password:</label>
+                <div class="relative">
+                    <input type="password" id="type_new_password" name="type_new_password" class="mt-1 p-1 border rounded w-full" placeholder="New password">
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                        <input type="checkbox" id="showNewPassword" class="form-checkbox h-5 w-5 text-gray-600">
+                        <label for="showNewPassword" class="ml-2 text-sm text-gray-600">Show Password</label>
+                    </div>
+                </div>
+            </div>            
+        
+            <div class="mb-2 ml-2 w-1/2">
+                <label for="confirm_password" class="block font-medium text-gray-300">Confirm Password:</label>
+                <div class="relative">
+                    <input type="password" id="confirm_password" name="confirm_password" class="mt-1 p-1 border rounded w-full" placeholder="Confirm password">
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                        <input type="checkbox" id="showConfirmPassword" class="form-checkbox h-5 w-5 text-gray-600">
+                        <label for="showConfirmPassword" class="ml-2 text-sm text-gray-600">Show Password</label>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="mb-4">
-            <label for="type_new_password" class="block font-medium text-gray-300">Type New Password:</label>
-            <div class="relative">
-                <input type="password" id="type_new_password" name="type_new_password" class="mt-1 p-2 border rounded w-full" placeholder="Enter your new password">
-                <button type="button" class="absolute right-2 top-2 text-gray-400" id="showPreviousPassword">
-                    Show
-                </button>
-            </div>
-        </div>
-
-        <div class="mb-4">
-            <label for="confirm_password" class="block font-medium text-gray-300">Enter Confirm Password:</label>
-            <div class="relative">
-                <input type="password" id="confirm_password" name="confirm_password" class="mt-1 p-2 border rounded w-full" placeholder="Confirm your new password">
-                <button type="button" class="absolute right-2 top-2 text-gray-400" id="showPreviousPassword">
-                    Show
-                </button>
-            </div>
-        </div>
-
-        <!-- ... (similar structure for new password and confirm password) ... -->
-        <div class="flex justify-center mt-3">
-            <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
+        <div class="flex justify-center mt-2">
+            <button class="bg-blue-700 text-white px-4 py-1 rounded">Change</button>
         </div>
     </div>
+    <script>
+        function setupShowPasswordButton(buttonId, inputId) {
+            const showButton = document.getElementById(buttonId);
+            const passwordField = document.getElementById(inputId);
+    
+            showButton.addEventListener('click', function() {
+                if (passwordField.type === 'password') {
+                    passwordField.type = 'text';
+                } else {
+                    passwordField.type = 'password';
+                }
+            });
+        }
+    
+        setupShowPasswordButton('showPreviousPassword', 'previous_password');
+        setupShowPasswordButton('showNewPassword', 'type_new_password');
+        setupShowPasswordButton('showConfirmPassword', 'confirm_password');
+    </script>
+
 </div>
 </div>
 @endsection
