@@ -106,47 +106,67 @@
         </div>
         @endsection
         
-        <style>
-            .square-container {
-                width: 1000px;
-                height: 50px;
-            }
-            .square-container2 {
-                width: 450px;
-                height: 50px;
-            }
-            .square-container3 {
-                width: 450px;
-                height: 50px;
-            }
-            .square-container4 {
-                width: 300px;
-                height: 50px;
-            }
-            .square-container5 {
-            width: 450px;
-            height: 200px;
-            margin-bottom: 20px; /* Add some margin at the bottom */
-            }
-            .square-container6 {
-                width: 534px;
-                height: 325px;
-            }
-            
-            
-            .calendar-container {
-            width: 400px;
-            padding: 10px;
-        
-            }
-        
-            .calendar-input {
-            width: 100%;
-            padding: 8px;
-        
-            }
+<style>
+    .square-container {
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+}
+    .square-container6 {
+        width: 517px;
+        height: 272px;
+        margin: 0 -618px;
+    }
+    .square-container2 {
+        width: 470px;
+        height: 50px;
+        margin: 0 83px;
+    }
+    .square-container3 {
+        width: 470px;
+        height: 50px;
+        margin: 0 83px;
+    }
 
-            .add-expenses-button {
+    .calendar-container {
+        width: 400px;
+        padding: 10px;
+        margin: 0 83px;
+    }
+
+    .calendar-input {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .square-container4 {
+        width: 300px;
+        height: 50px;
+        margin: 0 83px;
+    }
+    .square-container5 {
+    width: 1000px;
+    height: 150px;
+    margin: 0 83px;
+    margin-bottom: 20px; /* Add some margin at the bottom */
+    display: flex; /* Use flexbox to align textarea */
+    align-items: stretch; /* Stretch items vertically */
+}
+
+.square-container5 .gray-box {
+    flex: 1; /* Distribute available space to textarea */
+    display: flex;
+    flex-direction: column;
+}
+
+.square-container5 textarea {
+    flex: 1; /* Make textarea take up available space */
+    width: 100%; /* Fill the width of the container */
+    resize: none; /* Disable textarea resize */
+}
+
+
+    .add-expenses-button {
             margin-top: 10px;
             padding: 8px 16px;
             background-color: #234ab2; 
@@ -154,16 +174,20 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin: 0 500px;
             }
-.gray-box {
+            .gray-box {
     display: flex;
     flex-direction: column;
 }
 
 .item {
-    margin-bottom: 72px; /* Adjust the spacing as needed */
+    margin-bottom: 69px; /* Adjust the spacing as needed */
 }
+
 .item-space {
-    margin-top: 20px; /* Adjust the spacing as needed */
+    margin-top: 10px; /* Adjust the spacing as needed */
 }
-        </style>
+
+</style>
+

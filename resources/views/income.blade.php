@@ -40,12 +40,12 @@
     </form>
 </div>
 
-<div class="bg-gray-300 p-4 rounded square-container">
-    <div class="gray-box text-center">
-        Total Income: $0
-    </div>
+<div class="bg-gray-300 p-4 rounded square-container0">
+    <div class="gray-box text-center">Total Income: $0 </div>
 </div>
+
 <br>
+
 <div class="flex">
     <div class="left-column">
         <div class="bg-gray-300 p-4 rounded square-container2">
@@ -96,6 +96,9 @@
 </div>
 
 <button class="add-income-button mt-4">Add Income</button>
+</div>
+
+
 
 <!-- Add your content for the right side here -->
 </div>
@@ -103,22 +106,26 @@
 @endsection
 
 <style>
-    .square-container {
-        width: 1000px;
-        height: 50px;
-    }
+    .square-container0 {
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+}
     .square-container6 {
-        width: 534px;
-        height: 200px;
+        width: 517px;
+        height: 206px;
+        margin: 0 -618px;
     }
     .square-container2 {
-        width: 450px;
+        width: 470px;
         height: 50px;
+        margin: 0 83px;
     }
 
     .calendar-container {
         width: 400px;
         padding: 10px;
+        margin: 0 83px;
     }
 
     .calendar-input {
@@ -129,12 +136,29 @@
     .square-container4 {
         width: 300px;
         height: 50px;
+        margin: 0 83px;
     }
     .square-container5 {
-            width: 450px;
-            height: 200px;
-            margin-bottom: 20px; /* Add some margin at the bottom */
-            }
+    width: 1000px;
+    height: 150px;
+    margin: 0 83px;
+    margin-bottom: 20px; /* Add some margin at the bottom */
+    display: flex; /* Use flexbox to align textarea */
+    align-items: stretch; /* Stretch items vertically */
+}
+
+.square-container5 .gray-box {
+    flex: 1; /* Distribute available space to textarea */
+    display: flex;
+    flex-direction: column;
+}
+
+.square-container5 textarea {
+    flex: 1; /* Make textarea take up available space */
+    width: 100%; /* Fill the width of the container */
+    resize: none; /* Disable textarea resize */
+}
+
 
     .add-income-button {
             margin-top: 10px;
@@ -144,10 +168,11 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin: 0 500px;
             }
             .gray-box {
-    display: flex;
-    flex-direction: column;
+            display: flex;
+            flex-direction: column;
 }
 
 .item {

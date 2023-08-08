@@ -54,45 +54,46 @@
         <p class="text-sm">Change Profile Picture (must be 2-5 MB)</p>
 
     <div class="flex mt-2">
-        <button id="uploadBtn" class="bg-blue-700 text-white px-5 py-1 rounded mr-6">Upload <br> New <br> Image</button>
+        <button id="uploadBtn" class="bg-blue-700 text-white px-5 py-1 rounded mr-6">Upload <br> Image</button>
         <button id="removeBtn" class="bg-blue-700 text-white px-5 py-1 rounded">Remove <br> Photo</button>
     </div>
 </div>
 
-    <div class="mt-1 md:w-2/3">
-
-        <!-- Full Name Input -->
-        <div class="mb-4">
-            <label for="full_name" class="block font-medium text-gray-700">Full Name:</label>
-            <input type="text" id="full_name" name="full_name" class="mt-1 p-2 border rounded w-3/4" placeholder="Enter your full name">
-        </div>        
-    
-        <!-- Username Input -->
-        <div class="mb-4">
-            <label for="username" class="block font-medium text-gray-700">Username:</label>
-            <input type="text" id="username" name="username" class="mt-1 p-2 border rounded w-3/4" placeholder="Enter your username">
-        </div>        
-    
-        <!-- Phone No Input -->
-        <div class="mb-4">
-            <label for="phone_no" class="block font-medium text-gray-700">Phone No:</label>
-            <input type="text" id="phone_no" name="phone_no" class="mt-1 p-2 border rounded w-3/4" placeholder="Enter your phone no">
-        </div>        
-    
-        <!-- Email Address Input -->
-        <div class="mb-4" class="input-container">
-            <label for="email_address" class="block font-medium text-gray-700">Email Address:</label>
-            <input type="text" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-3/4" placeholder="Enter your email address">
-        </div>
+<div class="mt-1 md:w-2/3">
+    <!-- Full Name Input -->
+    <div class="mb-4 flex">
+        <label for="full_name" class="block font-medium text-gray-700 w-2/2 pr-2 flex items-center">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" class="mt-1 p-2 border rounded w-2/5" placeholder="Enter your full name">
     </div>
-</div>
 
-<div class="flex justify-center"> 
-    <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
+    <!-- Username Input -->
+    <div class="mb-4 flex">
+        <label for="username" class="block font-medium text-gray-700 w-2/2 pr-2 flex items-center">Username:</label>
+        <input type="text" id="username" name="username" class="mt-1 p-2 border rounded w-2/5" placeholder="Enter your username">
+    </div>
+
+    <!-- Phone No Input -->
+    <div class="mb-4 flex">
+        <label for="phone_no" class="block font-medium text-gray-700 w-2/2 pr-2 flex items-center">Phone No:</label>
+        <input type="tel" id="phone_no" name="phone_no" class="mt-1 p-2 border rounded w-2/6" placeholder="Enter your phone no" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
+        <div class="text-red-500 mt-1 ml-2 hidden" id="phone-error">Please enter a valid 10-digit phone number.</div>
+    </div>    
+
+    <!-- Email Address Input -->
+    <div class="mb-4 flex">
+        <label for="email_address" class="block font-medium text-gray-700 w-2/2 pr-2 flex items-center">Email Address:</label>
+        <input type="email" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-2/6" placeholder="Enter your email address">
+        <div class="text-red-500 mt-1 ml-2 hidden" id="email-error">Please enter a valid email address.</div>
+    </div>
+    <div class="flex justify-left">
+        <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
+    </div>
+    </div>
+
 </div>
 
      <!-- Change Password section -->
-     <div class="bg-gray-700 p-4 rounded-lg mt-8 max-w-2xl mx-auto">
+     <div class="bg-gray-700 p-4 rounded-lg mt-n2 max-w-2xl mx-auto">
         <div class="flex justify-center mb-2" class="button-container">
             <h3 class="text-xl font-semibold text-white">Change Password</h3>
         </div>
@@ -132,7 +133,7 @@
         </div>
 
         <div class="flex justify-center mt-2">
-            <button class="bg-blue-700 text-white px-4 py-1 rounded">Change</button>
+            <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
         </div>
     </div>
     
@@ -184,6 +185,30 @@
             });
         });
     </script>
+    <script>
+        const phoneInput = document.getElementById('phone_no');
+        const phoneError = document.getElementById('phone-error');
+    
+        phoneInput.addEventListener('input', () => {
+            if (phoneInput.validity.valid) {
+                phoneError.classList.add('hidden');
+            } else {
+                phoneError.classList.remove('hidden');
+            }
+        });
+    </script>
+    <script>
+    const emailInput = document.getElementById('email_address');
+    const emailError = document.getElementById('email-error');
+
+    emailInput.addEventListener('input', () => {
+        if (emailInput.validity.valid) {
+            emailError.classList.add('hidden');
+        } else {
+            emailError.classList.remove('hidden');
+        }
+    });
+</script>
 </div>
 </div>
 @endsection
