@@ -44,20 +44,23 @@
             <div class="flex justify-between">
 
     <!-- Profile Picture Section -->
-    <div class="md:w-1/3">
+    <div class="md:w-1/3 ml-6"> <!-- Added ml-4 for left margin -->
         <div class="flex items-center mb-4">
-            <div class="w-20 h-20 rounded-full overflow-hidden">
-                <img src="{{ asset('path_to_profile_picture.jpg') }}" alt="Profile Picture" class="w-full h-full object-cover">
+            <div class="w-64 h-64 rounded-full overflow-hidden">
+                <img id="profilePicture" src="{{ asset('path_to_profile_picture.jpg') }}" alt="Profile Picture" class="w-full h-full object-cover">
             </div>
         </div>
+        
         <p class="text-sm">Change Profile Picture (must be 2-5 MB)</p>
-        <div class="flex mt-2">
-            <button class="bg-blue-700 text-white px-5 py-1 rounded mr-1">Upload <br> New <br> Image</button>
-            <button class="bg-blue-700 text-white px-5 py-1 rounded">Remove <br> Photo</button>
-        </div>
+
+    <div class="flex mt-2">
+        <button id="uploadBtn" class="bg-blue-700 text-white px-5 py-1 rounded mr-6">Upload <br> New <br> Image</button>
+        <button id="removeBtn" class="bg-blue-700 text-white px-5 py-1 rounded">Remove <br> Photo</button>
     </div>
+</div>
 
     <div class="mt-1 md:w-2/3">
+
         <!-- Full Name Input -->
         <div class="mb-4">
             <label for="full_name" class="block font-medium text-gray-700">Full Name:</label>
@@ -150,6 +153,36 @@
         setupShowPasswordButton('showPreviousPassword', 'previous_password');
         setupShowPasswordButton('showNewPassword', 'type_new_password');
         setupShowPasswordButton('showConfirmPassword', 'confirm_password');
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadBtn = document.querySelector('#uploadBtn');
+            const removeBtn = document.querySelector('#removeBtn');
+            const profilePicture = document.querySelector('#profilePicture');
+            
+            // Function to handle image upload
+            uploadBtn.addEventListener('click', function() {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/*';
+                input.addEventListener('change', function() {
+                    const file = input.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            profilePicture.src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+                input.click();
+            });
+            
+            // Function to handle image removal
+            removeBtn.addEventListener('click', function() {
+                profilePicture.src = '{{ asset('path_to_default_image.jpg') }}'; // Replace with your default image path
+            });
+        });
     </script>
 </div>
 </div>
