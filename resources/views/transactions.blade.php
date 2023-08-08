@@ -38,12 +38,14 @@
     </form>
 </div>
 
-            <div class="flex space-x-4 mt-2">
+            <div class="flex space-x-6 mt-8 justify-center">
                 <button class="bg-blue-500 text-white px-4 py-2 rounded font-medium">Sort</button>
                 <button class="bg-blue-500 text-white px-4 py-2 rounded font-medium">Filter</button>
             </div>
-            <br><br>
-            <div class="flex space-x-4 mb-4">
+
+            <br>
+
+            <div class="flex space-x-4 mb-4 justify-center">
                 <div>
                     <!-- Item Section -->
                     <label for="item" class="block font-medium">Item:</label>
@@ -63,11 +65,13 @@
                     <!-- Date Section -->
                 <div>
                     <label for="date" class="block font-medium">Date:</label>
+
                 <div class="flex">
                      <input type="date" id="date" class="border border-gray-300 rounded px-3 py-2 w-36">
-                 <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium ml-2">Submit</button>
+                 <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium ml-10">Submit</button>
                  </div>
                 </div>
+
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {

@@ -97,8 +97,6 @@
 
 <button class="add-income-button mt-4">Add Income</button>
 
-
-
 <!-- Add your content for the right side here -->
 </div>
 </div>
