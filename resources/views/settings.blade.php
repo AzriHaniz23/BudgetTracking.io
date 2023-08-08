@@ -52,11 +52,10 @@
         </div>
         
         <p class="text-sm">Change Profile Picture (must be 2-5 MB)</p>
-
-    <div class="flex mt-2">
-        <button id="uploadBtn" class="bg-blue-700 text-white px-5 py-1 rounded mr-6">Upload <br> Image</button>
-        <button id="removeBtn" class="bg-blue-700 text-white px-5 py-1 rounded">Remove <br> Photo</button>
-    </div>
+        <div class="flex mt-2">
+            <button id="uploadBtn" class="bg-blue-700 text-white px-5 py-1 rounded mr-6">Upload <br> Image</button>
+            <button id="removeBtn" class="bg-blue-700 text-white px-5 py-1 rounded">Remove <br> Photo</button>
+        </div>
 </div>
 
 <div class="mt-1 md:w-2/3">
@@ -88,13 +87,12 @@
     <div class="flex justify-left">
         <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
     </div>
-    </div>
-
+</div>
 </div>
 
      <!-- Change Password section -->
-     <div class="bg-gray-700 p-4 rounded-lg mt-n2 max-w-2xl mx-auto">
-        <div class="flex justify-center mb-2" class="button-container">
+     <div class="bg-gray-700 p-4 rounded-lg mt-2 max-w-lg mx-auto">
+        <div class="flex justify-center mb-2">
             <h3 class="text-xl font-semibold text-white">Change Password</h3>
         </div>
         <div class="mb-2">
@@ -107,7 +105,7 @@
                 </div>
             </div>
         </div>
-        
+    
         <div class="flex justify-between">
             <div class="mb-2 mr-2 w-1/2">
                 <label for="type_new_password" class="block font-medium text-gray-300">New Password:</label>
@@ -115,27 +113,26 @@
                     <input type="password" id="type_new_password" name="type_new_password" class="mt-1 p-1 border rounded w-full" placeholder="New password">
                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
                         <input type="checkbox" id="showNewPassword" class="form-checkbox h-5 w-5 text-gray-600">
-                        <label for="showNewPassword" class="ml-2 text-sm text-gray-600">Show Password</label>
                     </div>
                 </div>
-            </div>            
-        
+            </div>
+    
             <div class="mb-2 ml-2 w-1/2">
                 <label for="confirm_password" class="block font-medium text-gray-300">Confirm Password:</label>
                 <div class="relative">
                     <input type="password" id="confirm_password" name="confirm_password" class="mt-1 p-1 border rounded w-full" placeholder="Confirm password">
                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
                         <input type="checkbox" id="showConfirmPassword" class="form-checkbox h-5 w-5 text-gray-600">
-                        <label for="showConfirmPassword" class="ml-2 text-sm text-gray-600">Show Password</label>
                     </div>
                 </div>
             </div>
         </div>
-
+    
         <div class="flex justify-center mt-2">
             <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
         </div>
     </div>
+</div>
     
     <script>
         function setupShowPasswordButton(buttonId, inputId) {
