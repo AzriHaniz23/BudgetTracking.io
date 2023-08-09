@@ -40,23 +40,25 @@
                 </form>
             </div>
             <hr class="my-8 mt-2 border-t-4 border-blue-500">
-
+            
             <div class="flex justify-between">
 
     <!-- Profile Picture Section -->
-    <div class="md:w-1/3 ml-6"> <!-- Added ml-4 for left margin -->
+    <div class="md:w-1/3 ml-6">
         <div class="flex items-center mb-4">
-            <div class="w-64 h-64 rounded-full overflow-hidden">
+            <div class="w-64 h-64 square-full rounded-xl overflow-hidden">
+            {{-- <div class="w-64 h-64 rounded-full overflow-hidden"> --}}
                 <img id="profilePicture" src="{{ asset('path_to_profile_picture.jpg') }}" alt="Profile Picture" class="w-full h-full object-cover">
             </div>
         </div>
         
         <p class="text-sm">Change Profile Picture (must be 2-5 MB)</p>
-        <div class="flex mt-2">
-            <button id="uploadBtn" class="bg-blue-700 text-white px-5 py-1 rounded mr-6">Upload <br> Image</button>
+        <div class="flex mt-2 ml-6">
+            <button id="uploadBtn" class="bg-blue-700 text-white px-5 py-1 rounded mr-4">Upload <br> Image</button>
             <button id="removeBtn" class="bg-blue-700 text-white px-5 py-1 rounded">Remove <br> Photo</button>
         </div>
-</div>
+    </div>
+    
 
 <div class="mt-1 md:w-2/3">
     <!-- Full Name Input -->
@@ -84,14 +86,13 @@
         <input type="email" id="email_address" name="email_address" class="mt-1 p-2 border rounded w-2/6" placeholder="Enter your email address">
         <div class="text-red-500 mt-1 ml-2 hidden" id="email-error">Please enter a valid email address.</div>
     </div>
-    <div class="flex justify-left">
-        <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
+    
+    <div class="flex justify-left pl-8">
+        <button class="bg-blue-700 text-white px-5 py-1 rounded">Confirm</button>
     </div>
-</div>
-</div>
-
-     <!-- Change Password section -->
-     <div class="bg-gray-700 p-4 rounded-lg mt-2 max-w-lg mx-auto">
+    
+    <!-- Change Password section -->
+    <div class="bg-gray-700 p-4 rounded-lg mt-6 max-w-lg mx-auto sm:mx-0">
         <div class="flex justify-center mb-2">
             <h3 class="text-xl font-semibold text-white">Change Password</h3>
         </div>
@@ -132,6 +133,9 @@
             <button class="bg-blue-700 text-white px-5 py-1 rounded">Change</button>
         </div>
     </div>
+</div>
+
+</div>
 </div>
     
     <script>
