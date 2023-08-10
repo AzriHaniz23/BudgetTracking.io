@@ -1,0 +1,238 @@
+/*
+	@name welcome_01
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 1728px;  overflow: hidden;  margin-left: auto; margin-right: auto;  }
+
+
+
+
+#finance_tracker {
+	top: 6px;
+	left: 129px;
+	width: 250.5px;
+	height: 127.5px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 45px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+#untitled_artwork__4__5 {
+	top: -29px !important;
+	position: absolute !important;
+	left: -51px;
+	width: 235px;
+	height: 193px;
+	background:url(skins/untitled_artwork__4__5.png);
+	background-size:cover;
+}
+
+
+#features {
+	top: 41px;
+	left: 343px;
+	width: 217px;
+	height: 73px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+#_about_us {
+	top: 41px;
+	left: 552px;
+	width: 229px;
+	height: 73px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+#_contact_us {
+	top: 41px;
+	left: 773px;
+	width: 266px;
+	height: 73px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+
+
+
+
+
+#_rectangle_249 {
+	top: 282px;
+	left: 0px;
+	width: 432px;
+	height: 700px;
+	background:rgba(3,66,109,1);
+}
+
+#_rectangle_250 {
+	top: 282px;
+	left: 432px;
+	width: 453px;
+	height: 700px;
+	background:rgba(44,102,150,1);
+}
+
+
+#_rectangle_251 {
+	top: 282px;
+	left: 885px;
+	width: 400px;
+	height: 700px;
+	background:rgba(104,196,239,1);
+}
+
+#_rectangle_252 {
+	top: 282px;
+	left: 1285px;
+	width: 443px;
+	height: 700px;
+	background:rgba(181,203,226,1);
+}
+
+
+
+
+
+#bank_2 {
+	top: 453px !important;
+	position: absolute !important;
+	left: 53px;
+	width: 326px;
+	height: 321px;
+	background:url(skins/bank_2.png);
+	background-size:cover;
+}
+
+
+#calendar_2 {
+	top: 447px !important;
+	position: absolute !important;
+	left: 507px;
+	width: 302px;
+	height: 332px;
+	background:url(skins/calendar_2.png);
+	background-size:cover;
+}
+
+
+#pngwing_13 {
+	top: 467px !important;
+	position: absolute !important;
+	left: 931px;
+	width: 309px;
+	height: 293px;
+	background:url(skins/pngwing_13.png);
+	background-size:cover;
+}
+
+
+#__pngtree_vector_transaction_icon_4101215__1__2 {
+	top: 415px !important;
+	position: absolute !important;
+	left: 1340px;
+	width: 333px;
+	height: 397px;
+	background:url(skins/__pngtree_vector_transaction_icon_4101215__1__2.png);
+	background-size:cover;
+}
+
+
+#bank_financing {
+	top: 832px;
+	left: 70px;
+	width: 306px;
+	height: 153px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#what_we_offer {
+	top: 179px;
+	left: 635px;
+	width: 575px;
+	height: 130px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+#daily_budgeting {
+	top: 832px;
+	left: 508px;
+	width: 314px;
+	height: 119px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#track_expenses {
+	top: 832px;
+	left: 934px;
+	width: 317px;
+	height: 107px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#previous_transaction {
+	top: 832px;
+	left: 1345px;
+	width: 336px;
+	height: 162px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+
+/* Add your custom CSS here */
