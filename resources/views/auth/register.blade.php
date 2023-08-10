@@ -3,7 +3,7 @@
 @section('content')
     <div class="flex h-screen">
         <div class="w-1/2 bg-blue-900 text-white p-6 rounded-lg flex flex-col justify-center items-center">
-            <img src="path_to_your_logo.png" alt="Logo" class="h-16 mb-4">
+            <img src="{{ asset('storage/logo.png') }}" alt="Logo" class="mb-4" style="width: 244px; height: 256px;">
             <h1 class="text-4xl font-bold mb-4">Welcome Back!</h1>
             <br>
 

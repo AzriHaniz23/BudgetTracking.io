@@ -64,8 +64,9 @@
 
         <div class="w-6/12 bg-blue-900 text-white p-6 rounded-lg flex flex-col justify-center">
             <div class="flex flex-col items-center">
-                <img src="path_to_your_logo.png" alt="Logo" class="h-8 mr-2">
-            <br>
+                
+                <img src="{{ asset('storage/logo.png') }}" alt="Logo" class="mb-4" style="width: 244px; height: 256px;">
+
                 <div class="flex items-center mb-4">
                     
                     <h2 class="text-2xl font-bold">New Here? Sign Up</h2>
