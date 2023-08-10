@@ -7,10 +7,10 @@
 <div class="flex h-screen">
     <div class="w-1/5 bg-blue-700 text-white p-6">
         <!-- Left Sidebar -->
-            <div class="flex items-center mb-6">
-                <img src="path_to_your_logo.png" alt="Logo" class="h-8 mr-2">
-                <h2 class="text-lg font-bold">Finance <br>Tracker</h2>
-            </div>
+        <div class="flex items-center mb-6">
+            <img src="{{ asset('storage/Dashboard_logo.png') }}" alt="Logo" class="mb-1 mr-2" style="width: 58px; height: 65px;">
+            <h2 class="text-lg font-bold">Finance <br>Tracker</h2>
+        </div>
             <hr class="my-6">
             <ul class="space-y-2">
                 <li>
